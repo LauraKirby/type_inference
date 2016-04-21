@@ -1,5 +1,5 @@
 /* 
-Creator notes:
+Writer's notes:
 
  The layout of the documentation will consist of three different sections marked by meaningful icons. A small icon will sit just to the left of the first paragraph. (Due to markup restrictions, images below are not placed in their ideal location.) The three different sections include, 1) Build; 2) Caution; and 3) Experiment.
  
