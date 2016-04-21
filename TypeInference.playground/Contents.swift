@@ -17,7 +17,7 @@ Creator notes:
 
 /*:
  ![Build icon](build_sm.png)
- Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our codebase is less likely to crash  and easier to debug during runtime.
+ Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our source code is less likely to crash  and easier to debug during runtime.
  
  For example, the compiler will issue an alert message if we try to store a `String` in previously declared type `Double`. By assigning the type ahead of time, the compiler is able to allocate  required space in memory and prepare the machine readable code for runtime.
 
@@ -39,7 +39,7 @@ Creator notes:
   var drought = "a shortage of water resulting from abnormally low rainfall"
 
 /*:
- In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference allows us to keep a cleaner and more readable codebase by decreasing the need repeatedly write type declarations.
+ In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference allows us to keep a cleaner and more readable source code by decreasing the need repeatedly write type declarations.
 */
 
  
