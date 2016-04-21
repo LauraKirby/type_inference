@@ -6,9 +6,9 @@ Creator notes:
     Sections one and three currently exist within the Swift documentation; however, only three ("Experimentation") is identified. Section two is new and provides a specific space for advisories to the learning developer.
 
  
-    Sections will be easily understood through the commonly used symboles implemented. To ensure clarity, there will be a key at the beginning of the documentation that briefly describes the meaning behind each icon.
+    Sections will be easily understood through the commonly used symbols implemented. To ensure clarity, there will be a key at the beginning of the documentation that briefly describes the meaning behind each icon.
  
-    Many people learn better through the use of images. The icons will allow us to eliminate pieces of text in the current documentation that can be conveyed through an image. The seemingly tactile "build" and "experiment" icons will allow the user to see onself as a true engineer aka "Yay, I love learning Swift!"
+    Many people learn better through the use of images. The icons will allow us to eliminate pieces of text in the current documentation that can be conveyed through an image. The seemingly tactile "build" and "experiment" icons will allow the user to see oneself as a true engineer aka "Yay, I love learning Swift!"
  
 
 
@@ -17,11 +17,11 @@ Creator notes:
 
 /*:
  ![Build icon](build_sm.png)
- Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our codebase is less likely to crash  and eaiser to debug during runtime.
+ Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our codebase is less likely to crash  and easier to debug during runtime.
  
  For example, the complier will issue an alert message if we try to store a `String` in previously declared type `Double`. By assigning the type ahead of time, the complier is able to allocate  required space in memory and prepare the machine readable code for runtime.
 
- *Explicit Type Declaration.* In Objective-C type must be explicity written and we can do the same in Swift.
+ *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
 */
  //Example 1:
  var waterfall: String
@@ -30,10 +30,10 @@ Creator notes:
  var groundWater: String = "is sourced through springs and wells"
 
 /*:
- In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficiant space for a variable that will eventually be of type String. "Example 2", shows how a variable can be declared with a type and a value.
+ In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2", shows how a variable can be declared with a type and a value.
  
  
- *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the complier can infer the type. Note how "Example 3", listed below, does not expcility declare a type.
+ *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the complier can infer the type. Note how "Example 3", listed below, does not explicitly declare a type.
 */
  // Example 3:
   var drought = "a shortage of water resulting from abnormally low rainfall"
