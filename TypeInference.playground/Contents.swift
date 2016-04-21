@@ -7,11 +7,11 @@
 
  The documentation consists of three sections. A small icon sits just to the left of the first paragraph. (Due to markup restrictions, images below are not placed in their ideal location.) The three different sections include, 1) Build; 2) Caution; and 3) Experiment.
  
- Sections one and three currently exist within the Swift documentation; however, only three ("Experimentation") is identified. Section two is new and provides a specific space for advisories to the learning developer.
+ Sections one and three currently exist within the Swift documentation; however, only three ("Experimentation") is explicitly identified. Section two is new and provides a specific space for advisories to the learning developer.
 
  Sections will be easily understood through the commonly used symbols implemented. To ensure clarity, there will be a key at the beginning of the documentation that briefly describes the meaning behind each icon.
  
- Many people learn better through the use of images. The icons will allow us to eliminate pieces of text in the current documentation that can be conveyed through an image. The seemingly tactile "build" and "experiment" icons will allow the user to see oneself as a true engineer aka "Yay, I love learning Swift!"
+ Many people learn better through the use of images. The icons will allow us to eliminate pieces of text in the current documentation that can be conveyed through an image. The seemingly tactile "build" and "experiment" icons will allow the user to see oneself as a true engineer.
 */
 
 /*:
@@ -19,9 +19,9 @@
  ![Build icon](build_sm.png)
 
 
- *Introduction.* Swift requires the types of variable and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the exhaustiveness of Swift's compiler and type inference system.
+ *Introduction.* Swift requires the types of variable and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the breadth of Swift's compiler and type inference system.
 
- *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables our source code is less likely to crash and easier to debug during runtime.
+ *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables, our source code is less likely to crash and easier to debug during runtime.
 
  *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
 */
@@ -33,10 +33,10 @@
     var groundWater: String = "sourced through springs and wells"
 
 /*:
- In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2", shows how a variable can be declared with a type and a value.
+ In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2" shows how a variable can be declared with a type and a value.
  
  
- *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note the example listed below, it does not explicitly declare a type.
+ *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
 */
   var drought = "a shortage of water resulting from abnormally low rainfall"
 
@@ -47,12 +47,12 @@
  
 /*:
  ![Caution icon](caution_sm.png)
- *Maintaining Readability.* Type inference allows us to write less code; however, keep in mind that readable code is an asset to our source code. If we assign the value of variable to the result of a function call, we may have a hard time remembering the return type. In scenarios such as these, let's go ahead and explicitly state the type.
-
- Let's say we would like store the year and month a new drought began in California.
-
- To keep our numbers in chronological order, we might the store start date as 201301 or Double 2013.01, both of which could be interpreted to mean the 1st month in 2013. We can see how these two numbers may have equivalent meaning; however, one is an `Integer` while the other is a `Double` and thus they are different types.
+ *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type. In scenarios such as these. Let's go ahead and explicitly state the type.
 */
+/*
+ Declare a function called 'findDrought' that will return the year and month a new drought began in California. The function should return a number of type 'Double'.
+*/
+
 func findDroughtDate() -> Double {
     let year = 2013.0
     let month = 0.01
@@ -60,12 +60,12 @@ func findDroughtDate() -> Double {
 }
 
 /*:
- Further down in our source code, when we are ready to store the returned value or implement a variable which accesses that value, we may forget which type the function returns or the variable holds. To increase readability, let's explicitly declare the type when the variable is declared.
+ In the developer community, dates are often returned from functions as  `Integers`. After we have written a few hundred lines of source code, we may forget that `findDroughtDate` returns a `Double`. Maintain readability by explicitly declaring the type when the variable is declared.
 */
 let caDrought: Double = findDroughtDate()
 
 /*:
  ![Experiment icon](experiment_sm.png)
  
- *Type Inference System*. What type does the compiler infer when we store the result of 5 times 10.3 in a constant?
+ *Type Inference System*. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?
 */
