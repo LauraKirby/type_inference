@@ -49,7 +49,7 @@ Creator notes:
 
  Let's say we would like store the year and month a new drought began in California.
 
- To keep our numbers in chronological order, we might store start date as 201301 or Double 2013.01, both of which could be interpreted to mean the 1st month in 2013. We can see how these two numbers may have equivalent meaning; however, one is an `Integer` while the other is a `Double` and thus they are different types.
+ To keep our numbers in chronological order, we might the store start date as 201301 or Double 2013.01, both of which could be interpreted to mean the 1st month in 2013. We can see how these two numbers may have equivalent meaning; however, one is an `Integer` while the other is a `Double` and thus they are different types.
 */
 func findDroughtDate() -> Double {
     let year = 2013.0
