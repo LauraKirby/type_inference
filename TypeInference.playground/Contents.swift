@@ -19,29 +19,27 @@
  ![Build icon](build_sm.png)
 
 
- *Introduction.* Swift requires the types of variable and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the breadth of Swift's compiler and type inference system.
+ *Introduction.* Swift requires the types of variables and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the breadth of Swift's compiler and type inference system.
 
  *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables, our source code is less likely to crash and easier to debug during runtime.
 
- *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
-*/
-
-    //Example 1:
-    var waterfall: String
-
-    // Example 2:
-    var groundWater: String = "sourced through springs and wells"
-
+ *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift. */
+//Example 1:
+var waterfall: String
+//:
+// Example 2:
+var groundWater: String = "sourced through springs and wells"
+//:
 /*:
  In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2" shows how a variable can be declared with a type and a value.
  
  
  *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
 */
-  var drought = "a shortage of water resulting from abnormally low rainfall"
-
+var drought = "a shortage of water resulting from abnormally low rainfall"
+//:
 /*:
- In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference allows us to keep a cleaner and more readable source code by decreasing the need repeatedly write type declarations.
+ In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference cleans up our source code by decreasing the need repeatedly write type declarations.
 */
 
  
@@ -58,14 +56,15 @@ func findDroughtDate() -> Double {
     let month = 0.01
     return month + year
 }
-
+//:
 /*:
  In the developer community, dates are often returned from functions as  `Integers`. After we have written a few hundred lines of source code, we may forget that `findDroughtDate` returns a `Double`. Maintain readability by explicitly declaring the type when the variable is declared.
 */
 let caDrought: Double = findDroughtDate()
-
+//:
 /*:
  ![Experiment icon](experiment_sm.png)
  
  *Type Inference System*. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?
 */
+//:
