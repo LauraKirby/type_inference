@@ -19,7 +19,7 @@ Creator notes:
  ![Build icon](build_sm.png)
  Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our codebase is less likely to crash  and easier to debug during runtime.
  
- For example, the complier will issue an alert message if we try to store a `String` in previously declared type `Double`. By assigning the type ahead of time, the complier is able to allocate  required space in memory and prepare the machine readable code for runtime.
+ For example, the compiler will issue an alert message if we try to store a `String` in previously declared type `Double`. By assigning the type ahead of time, the compiler is able to allocate  required space in memory and prepare the machine readable code for runtime.
 
  *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
 */
@@ -33,7 +33,7 @@ Creator notes:
  In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2", shows how a variable can be declared with a type and a value.
  
  
- *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the complier can infer the type. Note how "Example 3", listed below, does not explicitly declare a type.
+ *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how "Example 3", listed below, does not explicitly declare a type.
 */
  // Example 3:
   var drought = "a shortage of water resulting from abnormally low rainfall"
