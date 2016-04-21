@@ -13,17 +13,13 @@ Creator notes:
 
 
   Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. By providing examples on a variety of topics, people from diverse backgrounds may have an easier time relating to the material.
- */
-
-//: ![Build icon](build_sm.png)
-//: INTRO: Swift is safe, clean and fast.
+*/
 
 /*:
- WHY SHOULD I CARE - bc it's safe & clean
+ ![Build icon](build_sm.png)
+ Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our codebase is less likely to crash  and eaiser to debug during runtime.
  
- Similar to Objective-C, Swift requires each type to be declared. By explicitly declaring the type our codebase is less prone to crashing further on in the development process because we (and the compiler) know what type to expect. 
- 
- For example, the complier will crash if we try to store a `String` in previously declared type `Double`. By assigning the type ahead of time, the complier is able to allocate
+ For example, the complier will issue an alert message if we try to store a `String` in previously declared type `Double`. By assigning the type ahead of time, the complier is able to allocate  required space in memory and prepare the machine readable code for runtime.
 
  *Explicit Type Declaration.* In Objective-C type must be explicity written and we can do the same in Swift.
 */
@@ -34,17 +30,16 @@ Creator notes:
  var groundWater: String = "is sourced through springs and wells"
 
 /*:
- In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficiant space for a variable that will eventually be of type String. 
+ In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficiant space for a variable that will eventually be of type String. "Example 2", shows how a variable can be declared with a type and a value.
  
  
  *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the complier can infer the type. Note how "Example 3", listed below, does not expcility declare a type.
- */
-
+*/
  // Example 3:
   var drought = "a shortage of water resulting from abnormally low rainfall"
-/*:
 
-In the example below, the compiler automatically declares the variable `drought` as type `String`. Type inference allows us to keep a cleaner and more readable codebase by decreasing the need repeatedly write type declarations.
+/*:
+ In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference allows us to keep a cleaner and more readable codebase by decreasing the need repeatedly write type declarations.
 */
 
  
@@ -55,7 +50,7 @@ In the example below, the compiler automatically declares the variable `drought`
  Let's say we would like store the year and month a new drought began in California.
 
  To keep our numbers in chronological order, we might store start date as 201301 or Double 2013.01, both of which could be interpreted to mean the 1st month in 2013. We can see how these two numbers may have equivalent meaning; however, one is an `Integer` while the other is a `Double` and thus they are different types.
- */
+*/
 func findDroughtDate() -> Double {
     let year = 2013.0
     let month = 0.01
@@ -68,7 +63,7 @@ func findDroughtDate() -> Double {
 let caDrought: Double = findDroughtDate()
 
 /*:
-![Experiment icon](experiment_sm.png)
+ ![Experiment icon](experiment_sm.png)
  
-What type does the compiler infer when we store the result of 5 times 10.3 in a constant?
- */
+ What type does the compiler infer when we store the result of 5 times 10.3 in a constant?
+*/
