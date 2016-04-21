@@ -45,10 +45,10 @@ var drought = "a shortage of water resulting from abnormally low rainfall"
  
 /*:
  ![Caution icon](caution_sm.png)
- *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type. In scenarios such as these. Let's go ahead and explicitly state the type.
+ *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type.
 */
 /*
- Declare a function called 'findDrought' that will return the year and month a new drought began in California. The function should return a number of type 'Double'.
+ Declare a function called 'findDrought' that will return the year and month a new drought began in California. The function should return a number of type Double.
 */
 
 func findDroughtDate() -> Double {
