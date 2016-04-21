@@ -19,7 +19,7 @@
  ![Build icon](build_sm.png)
 
 
- *Introduction.* Swift requires the types of variable and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider where it may be useful for maintaining readability. Experimenting with type inference in a Playground will demonstrate the exhaustiveness of Swift's compiler and type inference system.
+ *Introduction.* Swift requires the types of variable and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the exhaustiveness of Swift's compiler and type inference system.
 
  *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables our source code is less likely to crash and easier to debug during runtime.
 
