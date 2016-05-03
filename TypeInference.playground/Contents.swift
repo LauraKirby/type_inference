@@ -49,8 +49,8 @@ var groundWater: String = "sourced through springs and wells"
 //:
 /*:
  In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2" shows how a variable can be declared with a type and a value.
- + New topic is brought in, "compiler to allocate sufficient space". Where is this "space" being created?
- + When discussing allocation, initialization should be covered.
+ + 16. New topic is brought in, "compiler to allocate sufficient space". Where is this "space" being created?
+ + 17. When discussing allocation, initialization should be covered.
 
  *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
 */
@@ -58,15 +58,15 @@ var drought = "a shortage of water resulting from abnormally low rainfall"
 //:
 /*:
  In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference cleans up our source code by decreasing the need repeatedly write type declarations.
- + 16. You are the one who declared the variable and the complier inferred it as type string.
+ + 18. You are the one who declared the variable and the complier inferred it as type string.
 */
 
  
 /*:
  ![Caution icon](caution_sm.png)
  *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type.
- + 17. Makes sense in dynamically typed language, not really in statically typed language.
- + 18. Annotate the type: when using the “as” operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.
+ + 19. Makes sense in dynamically typed language, not really in statically typed language.
+ + 20. Annotate the type: when using the “as” operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.
 */
 /*
  Declare a function called 'findDrought' that will return the year and month a new drought began in California. The function should return a number of type Double.
@@ -87,13 +87,13 @@ let caDrought: Double = findDroughtDate()
  ![Experiment icon](experiment_sm.png)
  
  *Type Inference System*. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?
- + 19. How do we know that the type was inferred as a `Double` and not a `Float`?
- + 20. Odd ending. No recap. Nothing really to experiment with.
+ + 21. How do we know that the type was inferred as a `Double` and not a `Float`?
+ + 22. Odd ending. No recap. Nothing really to experiment with.
 */
 //:
 
 /*:
- + 21. Additional notes from review:
+ + 23. Additional notes from review:
     + Make writing sample more substantive
     + More complicated examples
     + Add example where type inference works in opposite direction
