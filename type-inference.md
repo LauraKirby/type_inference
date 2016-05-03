@@ -6,9 +6,7 @@
 
  The documentation consists of three sections. A small icon sits just to the left of the first paragraph. (Due to markup restrictions, images below are not placed in their ideal location.) The three different sections include, 1) Build; 2) Caution; and 3) Experiment.
 
- Sections one and three currently exist within the Swift documentation; however, only three ("Experimentation") is explicitly identified. Section two is new and provides a specific space for advisories to the learning developer.
-
-  3\. What do you mean by "one and three currently exist within the Swift documentation"?
+ In the official Swift documentation, a new language feature is presented to the audience in two sections. The first provides general information and the second offers a space for the audience to experiment. In contrast, the writing sample below presents a new language feature three sections. The first two sections take the general information and separate it into over-arching concepts of how to build and precautions to take when implementing the newly described feature. Similar to the Swift documentation, the third section encourages the audience to apply the newly learned concepts on their own and ends the discussion.
 
  Sections will be easily understood through the commonly used symbols implemented. To ensure clarity, there will be a key at the beginning of the documentation that briefly describes the meaning behind each icon.
 
