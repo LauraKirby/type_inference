@@ -26,6 +26,7 @@
  *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift. */
 //Example 1:
 var waterfall: String
+
 //:
 // Example 2:
 var groundWater: String = "sourced through springs and wells"
@@ -68,3 +69,4 @@ let caDrought: Double = findDroughtDate()
  *Type Inference System*. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?
 */
 //:
+var result = 5 * 10.9
