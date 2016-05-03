@@ -1,15 +1,15 @@
 ## Prompt:
  Write a short document that explains Swift’s type-inference system and why developers should care.
- + 1. Was a Playground the best choice given the contents of your writing sample?
+1. Was a Playground the best choice given the contents of your writing sample?
 
 ## Writer's Note:
  Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. By providing examples on a variety of topics, people from diverse backgrounds may have an easier time relating to the material.
- + 2. You mention "hydrology" but your writing sample doesn't cover in depth concepts related to this field of study. Why?
+2. You mention "hydrology" but your writing sample doesn't cover in depth concepts related to this field of study. Why?
 
  The documentation consists of three sections. A small icon sits just to the left of the first paragraph. (Due to markup restrictions, images below are not placed in their ideal location.) The three different sections include, 1) Build; 2) Caution; and 3) Experiment.
 
  Sections one and three currently exist within the Swift documentation; however, only three ("Experimentation") is explicitly identified. Section two is new and provides a specific space for advisories to the learning developer.
- + 3. What do you mean by "one and three currently exist within the Swift documentation"?
+3. What do you mean by "one and three currently exist within the Swift documentation"?
 
  Sections will be easily understood through the commonly used symbols implemented. To ensure clarity, there will be a key at the beginning of the documentation that briefly describes the meaning behind each icon.
  + 4. The use of too many symbols can complicate the user experience.
