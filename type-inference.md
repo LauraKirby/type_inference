@@ -2,19 +2,13 @@
  Write a short document that explains Swift’s type-inference system and why developers should care.
 
 ## Writer's Note:
+ The writing sample below aims to reach a diverse audience through the use new topics in the sample code. Additionally, it attempts to add a layer of organization by separating over-arching concepts within the material covered. Lastly, the writing sample considers how the use of images may help various types of learners understand the material better.
+
  Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. The examples are quite general, this was done to avoid confusing people who are not hydrology experts. Additionally, keeping topics convered in sample can help keep the material understandable by non-native English speakers. By providing examples on a variety of general topics, people from diverse backgrounds may have an easier time relating to and engaging with the material.
 
- The documentation consists of three sections. A small icon sits just to the left of the first paragraph. (Due to markup restrictions, images below are not placed in their ideal location.) The three different sections include, 1) Build; 2) Caution; and 3) Experiment.
+ In the official Swift documentation, a new language feature is presented to the audience in two sections. The first provides general information and the second offers a space for the audience to experiment. In contrast, the writing sample below presents a new language feature in three sections. The first two reshape general information by separating it into over-arching concepts of how to build with and precautions to take when implementing the newly described feature. Similar to the Swift documentation, the third section encourages the audience to apply the newly learned concepts on their own and ends the discussion.
 
- In the official Swift documentation, a new language feature is presented to the audience in two sections. The first provides general information and the second offers a space for the audience to experiment. In contrast, the writing sample below presents a new language feature three sections. The first two sections take the general information and separate it into over-arching concepts of how to build and precautions to take when implementing the newly described feature. Similar to the Swift documentation, the third section encourages the audience to apply the newly learned concepts on their own and ends the discussion.
-
- Sections will be easily understood through the commonly used symbols implemented. To ensure clarity, there will be a key at the beginning of the documentation that briefly describes the meaning behind each icon.
-
-  4\. The use of too many symbols can complicate the user experience.
-
- Many people learn better through the use of images. The icons will allow us to eliminate pieces of text in the current documentation that can be conveyed through an image. The seemingly tactile "build" and "experiment" icons will allow the user to see oneself as a true engineer.
-
-  5\. Do you know that people actually learn better through the use of images?
+ Research shows that people may learn better through the use various forms of media. The three sections, in the writing sample below, are marked with icons indicating build, caution and experiment. To ensure clarity of each section, there will be a key at the beginning of the documentation (key not yet created). The icons are included to help add variety to the forms of media used within.
 
   6\. Does the explicit tone take into consideration your audience?
 
