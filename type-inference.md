@@ -59,6 +59,7 @@
  ![Caution icon](./images/caution_sm.png)
  *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type.
  + 17. Makes sense in dynamically typed language, not really in statically typed language.
+
  + 18. Annotate the type: when using the “as” operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.
 
  Declare a function called 'findDrought' that will return the year and month a new drought began in California. The function should return a number of type Double.
