@@ -1,7 +1,7 @@
 ## Prompt:
  Write a short document that explains Swift’s type-inference system and why developers should care.
 
-## Writer's Note:
+## Writer's Note to Brian and Alex:
  The writing sample below aims to reach a diverse audience through the use new topics in the sample code. Additionally, it attempts to add a layer of organization by separating over-arching concepts within the material covered. Lastly, the writing sample considers how the use of images may help various types of learners understand the material better.
 
  Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. The examples are quite general, this was done to avoid confusing people who are not hydrology experts. Additionally, keeping topics convered in sample can help keep the material understandable by non-native English speakers. By providing examples on a variety of general topics, people from diverse backgrounds may have an easier time relating to and engaging with the material.
@@ -9,9 +9,6 @@
  In the official Swift documentation, a new language feature is presented to the audience in two sections. The first provides general information and the second offers a space for the audience to experiment. In contrast, the writing sample below presents a new language feature in three sections. The first two reshape general information by separating it into over-arching concepts of how to build with and precautions to take when implementing the newly described feature. Similar to the Swift documentation, the third section encourages the audience to apply the newly learned concepts on their own and ends the discussion.
 
  Research shows that people may learn better through the use various forms of media. The three sections, in the writing sample below, are marked with icons indicating build, caution and experiment. To ensure clarity of each section, there will be a key at the beginning of the documentation (key not yet created). The icons are included to help add variety to the forms of media used within.
-
-  6\. Does the explicit tone take into consideration your audience?
-
 
 ## Documentation: Swift's Type Inference
  ![Build icon](./images/build_sm.png) *Introduction.* Swift requires the types of variables and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the breadth of Swift's compiler and type inference system.
