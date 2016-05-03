@@ -45,6 +45,7 @@
   13\. Why is the code easier to debug during runtime?
 
  *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
+
   14\. Add comma after "Objective-C."
 
   15\. Add article before "type."
