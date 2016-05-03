@@ -1,8 +1,6 @@
 ## Prompt:
  Write a short document that explains Swift’s type-inference system and why developers should care.
 
-  1\. Was a Playground the best choice given the contents of your writing sample?
-
 ## Writer's Note:
  Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. By providing examples on a variety of topics, people from diverse backgrounds may have an easier time relating to the material.
 
