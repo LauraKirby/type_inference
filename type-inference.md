@@ -31,9 +31,7 @@
  var drought = "a shortage of water resulting from abnormally low rainfall"
  ```
 
- In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference cleans up our source code by decreasing the need repeatedly write type declarations.
-
-  18\. You are the one who declared the variable and the complier inferred it as type string.
+ In the example above, a variable is declared and the compiler infers the type as `String`. By decreasing the need to annotate the type, our source code is cleaner.
 
  ![Caution icon](./images/caution_sm.png)
  *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type.
