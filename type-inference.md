@@ -13,27 +13,21 @@
 ## Documentation: Swift's Type Inference
  ![Build icon](./images/hammer.png) *Introduction.* Swift is a type safe language and requires every entity to have a type. Similarly to other type safe languages such as Objective-C, Java or C#, annotating the type is a common practice. In contrast, Swift's type inference system allows developers to write cleaner and more concise source code. When the compiler is not able to infer the type, we will need to annotate the type. Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.
 
- *Type Safe.* Swift requires each enity to have a type at compile time. If an enity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement causes a little more work on behalf of the complier but it will prevent our source code from crashing during run time due to type errors.
+ *Type Safe.* Swift requires each entity to have a type at compile time. If an entity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.
 
- *Explicit Type Declaration.* In Objective-C, a type must be explicitly annotated and we can do the same in Swift.
+ *Explicit Type Annotation.* In Objective-C, a type must be explicitly annotated and we can do the same in Swift.
 
- Create a variable of type `String` that does not hold a value.
+ Use explicit annotation to declare a variable of type `String`.
 
  ```swift
  var waterfall: String
  ```
 
- Create a variable of type `String` that holds a value.
+ Use explicit annotation to declare a variable of type `String` with a `String` value.
 
  ```swift
  var groundWater: String = "sourced through springs and wells"
  ```
-
- In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2" shows how a variable can be declared with a type and a value.
-
-  16\. New topic is brought in, "compiler to allocate sufficient space". Where is this "space" being created?
-
-  17\. When discussing allocation, initialization should be covered.
 
  *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
 
