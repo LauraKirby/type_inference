@@ -15,21 +15,17 @@
 
  *Type Safe.* Swift requires each entity to have a type at compile time. If an entity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.
 
- *Explicit Type Annotation.* In Objective-C, a type must be explicitly annotated and we can do the same in Swift.
+ *Type Annotation.* In Objective-C, a type must be explicitly annotated and we can do the same in Swift.
 
- Use explicit annotation to declare a variable of type `String`.
-
- ```swift
- var waterfall: String
- ```
-
- Use explicit annotation to declare a variable of type `String` with a `String` value.
+ Use type annotation to declare a variable of type `String`.
 
  ```swift
  var groundWater: String = "sourced through springs and wells"
  ```
 
- *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
+ *Type Inference.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
+
+ Use type inference to declare a variable of type `String`.
 
  ```swift
  var drought = "a shortage of water resulting from abnormally low rainfall"
