@@ -11,15 +11,7 @@
  Research shows that people may learn better through the use various forms of media. The three sections, in the writing sample below, are marked with icons indicating build, caution and experiment. To ensure clarity of each section, there will be a key at the beginning of the documentation (key not yet created). The icons are included to help add variety to the forms of media used within.
 
 ## Documentation: Swift's Type Inference
- ![Build icon](./images/hammer.png) *Introduction.* Swift requires the types of variables and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the breadth of Swift's compiler and type inference system.
-
-  7\. The icons are good but this one is often used for "settings".
-
-  8\. Every entity must have a type.
-
-  9\. Let the audience know where they may have seen this before.
-
-  10\. What is "faster"?
+ ![Build icon](./images/hammer.png) *Introduction.* Swift is a type safe language and requires every entity to have a type. Similarly to other type safe languages such as Objective-C, Java or C#, annotating the type is a common practice. In contrast, Swift's type inference system allows developers to write cleaner and more concise source code. When the compiler is not able to infer the type, we will need to annotate the type. Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.
 
  *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables, our source code is less likely to crash and easier to debug during runtime.
 
