@@ -2,7 +2,7 @@
  Write a short document that explains Swift’s type-inference system and why developers should care.
 
 ## Writer's Note to Brian and Alex:
- The writing sample below aims to reach a diverse audience through the use new topics in the sample code. Additionally, it attempts to add a layer of organization by separating over-arching concepts within the material covered. Lastly, the writing sample considers how the use of images may help various types of learners understand the material better.
+ The writing sample below aims to reach a diverse audience through the use of new topics in the sample code. Additionally, it attempts to add a layer of organization by separating over-arching concepts within the material covered. Lastly, the writing sample considers how the use of images may help various types of learners understand the material better.
 
  Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. The concepts mentioned in connection with hydrology are quite simple, this was done to avoid confusing people who are not hydrology experts. Additionally, keeping topics simple may help keep the material understandable by non-native English speakers. By providing examples on a variety of general topics, people from diverse backgrounds may have an easier time relating to and engaging with the material.
 
