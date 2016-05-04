@@ -13,25 +13,19 @@
 ## Documentation: Swift's Type Inference
  ![Build icon](./images/hammer.png) *Introduction.* Swift is a type safe language and requires every entity to have a type. Similarly to other type safe languages such as Objective-C, Java or C#, annotating the type is a common practice. In contrast, Swift's type inference system allows developers to write cleaner and more concise source code. When the compiler is not able to infer the type, we will need to annotate the type. Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.
 
- *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables, our source code is less likely to crash and easier to debug during runtime.
+ *Type Safe.* Swift requires each enity to have a type at compile time. If an enity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement causes a little more work on behalf of the complier but it will prevent our source code from crashing during run time due to type errors.
 
-  11\. Clarify the difference between "type declaration" and "type inference." When do you use each?
+ *Explicit Type Declaration.* In Objective-C, a type must be explicitly annotated and we can do the same in Swift.
 
-  12\. The code is "less likely" to crash in comparison to what?
+ Create a variable of type `String` that does not hold a value.
 
-  13\. Why is the code easier to debug during runtime?
-
- *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
-
-  14\. Add comma after "Objective-C."
-
-  15\. Add article before "type."
-
-  ```swift
- //Example 1:
+ ```swift
  var waterfall: String
+ ```
 
- //Example 2:
+ Create a variable of type `String` that holds a value.
+
+ ```swift
  var groundWater: String = "sourced through springs and wells"
  ```
 
