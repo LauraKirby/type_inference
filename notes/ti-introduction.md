@@ -18,12 +18,12 @@ var drought = "a shortage of water resulting from abnormally low rainfall"
 
 -> Include generic functions.
 
-## Type Annotation Required
+## 2. Type Annotation Required
 While type inference cleans up our source code, type annotation is required when doing things like type casting and type coericon.
 
 -> Include type casting and type coericon.
 
-## Experiment
+## 3. Experiment
 Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.
 
 *Type Inference System*. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?
