@@ -1,12 +1,8 @@
 ## Prompt:
  Write a short document that explains Swift’s type-inference system and why developers should care.
 
-  1\. Was a Playground the best choice given the contents of your writing sample?
-
 ## Writer's Note:
- Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. By providing examples on a variety of topics, people from diverse backgrounds may have an easier time relating to the material.
-
-  2\. You mention "hydrology" but your writing sample doesn't cover in depth concepts related to this field of study. Why?
+ Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. The examples are quite general, this was done to avoid confusing people who are not hydrology experts. Additionally, keeping topics convered in sample can help keep the material understandable by non-native English speakers. By providing examples on a variety of general topics, people from diverse backgrounds may have an easier time relating to and engaging with the material.
 
  The documentation consists of three sections. A small icon sits just to the left of the first paragraph. (Due to markup restrictions, images below are not placed in their ideal location.) The three different sections include, 1) Build; 2) Caution; and 3) Experiment.
 
