@@ -1,0 +1,9 @@
+Focus on researching items:
+
++ Type inference in both directions
+
++ Protocols
+
++ Generics
+
++ Annotate the type: when using the “as” operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.
