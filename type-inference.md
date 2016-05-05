@@ -55,14 +55,11 @@
     + Due on Thursday, 5/5/16
 
 Sources:
-1. "To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger
-- http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger
 
-2. "Chunking Information for Instructional Design" by Connie Malamed
-- http://theelearningcoach.com/elearning_design/chunking-information/
+1. "To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger, http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger
 
-3. "The 7 Styles of Learning: Which works for you?" by Katie Lepi
-- http://www.edudemic.com/styles-of-learning/
+2. "Chunking Information for Instructional Design" by Connie Malamed, http://theelearningcoach.com/elearning_design/chunking-information/
 
-4. "Type Safety" by Michael Hicks
-- http://www.pl-enthusiast.net/2014/08/05/type-safety/
+3. "The 7 Styles of Learning: Which works for you?" by Katie Lepi, http://www.edudemic.com/styles-of-learning/
+
+4. "Type Safety" by Michael Hicks, http://www.pl-enthusiast.net/2014/08/05/type-safety/
