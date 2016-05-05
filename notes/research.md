@@ -3,6 +3,9 @@
 ## 1. Type inference in both directions
 _________________________
 ### LK - Summary:
+Incomplete.
+
+### Notes:
 Maybe I can use the `is` operator here.
 The is operator has two related but technically distinct uses in Swift.
 
@@ -14,12 +17,14 @@ http://www.codingexplorer.com/type-casting-swift/
 
 ## 2. Protocols
 _________________________
+### LK - Summary:
+Incomplete.
 
+### Notes:
 
 
 ## 3. Generics
 _________________________
-
 ### LK - Summary:
 Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning parameters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
 
@@ -29,7 +34,7 @@ The placeholder for a type parameter is named and specified in angle brackets af
 Basic example
 --------------
 Define a function that will take values of two separate types and print them.
-```
+```swift
 func printChosenColor<T,U>(a: T, b: U) {
     print("You chose the color:", a, b)
 }
@@ -49,7 +54,7 @@ printChosenColor(myColorName, b: myColorDecimal)
 --------------
 Added complexity but may make where the type inference is occurring confusing to the audience
 --------------
-```
+```swift
 func printColor<T>(a: T) {
     if a is Int {
         print("The hexadecimal value of your color is ", a)
@@ -77,7 +82,7 @@ printColor()
 ```
 
 --------------------------------------
-### Swift Docs -  Generics:
+### Notes:
 https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html
 
 Generic functions can work with any type.
@@ -90,12 +95,12 @@ The other difference is that the generic function’s name `(swapTwoValues(_:_:)
 
 The `swapTwoValues(_:_:)` function can now be called in the same way as `swapTwoInts`, except that it can be passed two values of any type, as long as both of those values are of the same type as each other. Each time `swapTwoValues(_:_:)` is called, the type to use for `T` is inferred from the types of values passed to the function.
 
-## 4. Annotate the type -
+## 4. Annotate the type - “as” operator to type cast
 _________________________
 
-  A. when using the “as” operator to type cast
-  -----------------
-  //When working with a hierarchy of classes and subclasses we need to be more explicit about acceptable types. Type casting can be used with a hierarchy of classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
+### LK Summary
+
+When working with a hierarchy of classes and subclasses we need to be more explicit about acceptable types. Type casting can be used with a hierarchy of classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
 
 ```swift
 // Create a class called Plant.
@@ -133,7 +138,7 @@ let myPlants = [
 The type of "myPlants" is inferred to be `Plant`. If you iterate over the contents of `myPlants`, the items you receive back are typed as `Plants`, and not as `Perennial` or `Succulent`. When you have a constant or variable of a certain class type that refers to an instance of a subclass, you can try to downcast to the subclass type with `as?` or `as!`.
 
 ```swift
-// Create a function that will downcast the `Plant` instances to their subclasses and access a property from their individual class.
+// Create a function that will downcast the Plant instances to their subclasses and access a property from their individual class.
 
 func downcastAndPrint(plants:[Plant]) {
     for item in myPlants {
@@ -147,8 +152,18 @@ func downcastAndPrint(plants:[Plant]) {
 
 downcastAndPrint(myPlants)
 ```
+## 5. Annotate the type - type coercion
+_________________________
 
-  B. type coercion
-  -----------------
+### LK - Summary:
+Incomplete.
 
-  c. when the compiler isn't able to infer the type on its own
+### Notes:
+
+## 6. Annotate the type - when the compiler isn't able to infer the type on its own
+_________________________
+
+### LK - Summary:
+Incomplete.
+
+### Notes:
