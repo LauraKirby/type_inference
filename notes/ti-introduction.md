@@ -1,4 +1,7 @@
-##Documentation: Swift’s Type-inference System
+### Prompt: Write a short document that explains Swift’s type-inference system and why developers should care.
+--------------------------
+
+## Documentation: Swift’s Type-inference System
 First, we will conver how the basics of Swift's type inference system. Then we will walk through specific examples of where type annotation is required. We will end by testing some sample code in a Playground.
 
 ## 1. Type Inference
