@@ -2,7 +2,15 @@
 
 ## 1. Type inference in both directions
 _________________________
+### LK - Summary:
+Maybe I can use the `is` operator here.
+The is operator has two related but technically distinct uses in Swift.
 
+First, if the right-hand term is a class name, it returns a Bool regarding whether the left-hand term is indeed that subclass.
+
+Secondly, if the right-hand term is a protocol, it returns a Bool regarding whether the left-hand term adopts that protocol.
+
+http://www.codingexplorer.com/type-casting-swift/
 
 ## 2. Protocols
 _________________________
@@ -13,26 +21,35 @@ _________________________
 _________________________
 
 ### LK - Summary:
-Generic functions are defined with *type parameters*, meaning paramaters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
+Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning paramaters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
 
 The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.
 
-Define a function that will take values of two separate types and print them.
 ```
-func printChosenColor<T,U>(a: T, b: U) {
-    print("You chose the color:", a, b)
+func printColor<T>(a: T) {
+    if a is Int {
+        print("The hexidecimal value of your color is ", a)
+    } else if a is String {
+        print("You chose the color ", a)
+    } else {
+        print("Please provide the hexidecimal value or the name of your favorite color")
+    }
 }
 
-var myColorDecimal = 5649055
-var myColorName = "purple"
+var myColorDeci = 5649055
+var myColorStr = "purple"
 
-printChosenColor(myColorDecimal, b: myColorName)
-// You chose the color: 5649055 purple
-// a is inferred as type Int, while b is inferred as type String
+printColor(myColorDeci)
+// "The hexidecimal value of your color is 5649055"
+// a is inferred as type Int
 
-printChosenColor(myColorName, b: myColorDecimal)
-// You chose the color: purple 5649055
-// a is inferred as type String, while b is inferred as type Int
+printColor(myColorStr)
+// "You chose the color purple"
+// a is inferred as type String
+
+printColor()
+// "Please provide the hexidecimal value or the name of your favorite color."
+// a is nil
 ```
 
 --------------------------------------
