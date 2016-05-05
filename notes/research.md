@@ -25,6 +25,30 @@ Generic functions allow us to pass in any type to our function when it is called
 
 The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.
 
+--------------
+Basic example
+--------------
+Define a function that will take values of two separate types and print them.
+```
+func printChosenColor<T,U>(a: T, b: U) {
+    print("You chose the color:", a, b)
+}
+
+var myColorDecimal = 5649055
+var myColorName = "purple"
+
+printChosenColor(myColorDecimal, b: myColorName)
+// You chose the color: 5649055 purple
+// a is inferred as type Int, while b is inferred as type String
+
+printChosenColor(myColorName, b: myColorDecimal)
+// You chose the color: purple 5649055
+// a is inferred as type String, while b is inferred as type Int
+```
+
+--------------
+Added complexity but may make where the type inference is occurring confusing to the audience
+--------------
 ```
 func printColor<T>(a: T) {
     if a is Int {
