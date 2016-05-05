@@ -5,27 +5,10 @@ _________________________
 ### LK - Summary:
 Incomplete.
 
-### Notes:
-Maybe I can use the `is` operator here.
-The is operator has two related but technically distinct uses in Swift.
-
-First, if the right-hand term is a class name, it returns a Bool regarding whether the left-hand term is indeed that subclass.
-
-Secondly, if the right-hand term is a protocol, it returns a Bool regarding whether the left-hand term adopts that protocol.
-
-http://www.codingexplorer.com/type-casting-swift/
-
 ## 2. Protocols
-_________________________
-### LK - Summary:
 Incomplete.
 
-### Notes:
-
-
 ## 3. Generics
-_________________________
-### LK - Summary:
 Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning parameters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
 
 The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.
@@ -81,25 +64,7 @@ printColor()
 // a is nil
 ```
 
---------------------------------------
-### Notes:
-https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html
-
-Generic functions can work with any type.
-
-`func swapTwoValues<T>(inout a: T, inout _ b: T)`
-
-The generic version of the function uses a *placeholder* type name (called `T`, in this case) instead of an actual type name (such as `Int`, `String`, or `Double`). The placeholder type name doesn’t say anything about what `T` must be, but it does say that both a and b must be of the same type `T`, whatever `T` represents. The actual type to use in place of `T` will be determined each time the `swapTwoValues(_:_:)` function is called.
-
-The other difference is that the generic function’s name `(swapTwoValues(_:_:))` is followed by the placeholder type name (`T`) inside angle brackets (`<T>`). The brackets tell Swift that `T` is a placeholder type name within the `swapTwoValues(_:_:)` function definition. Because `T` is a placeholder, Swift does not look for an actual type called `T`.
-
-The `swapTwoValues(_:_:)` function can now be called in the same way as `swapTwoInts`, except that it can be passed two values of any type, as long as both of those values are of the same type as each other. Each time `swapTwoValues(_:_:)` is called, the type to use for `T` is inferred from the types of values passed to the function.
-
 ## 4. Annotate the type - “as” operator to type cast
-_________________________
-
-### LK Summary
-
 When working with a hierarchy of classes and subclasses we need to be more explicit about acceptable types. Type casting can be used with a hierarchy of classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
 
 ```swift
@@ -152,18 +117,17 @@ func downcastAndPrint(plants:[Plant]) {
 
 downcastAndPrint(myPlants)
 ```
+
 ## 5. Annotate the type - type coercion
-_________________________
-
-### LK - Summary:
 Incomplete.
-
-### Notes:
 
 ## 6. Annotate the type - when the compiler isn't able to infer the type on its own
-_________________________
-
-### LK - Summary:
 Incomplete.
 
-### Notes:
+## Sources
+_________________________
+1. "The Swift Programming Language (Swift 2.2): Generics", https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Generics.html
+
+2. "The Swift Programming Language (Swift 2.2): Type Casting", https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html
+
+3. http://www.codingexplorer.com/type-casting-swift/ (mentions type inference in both directions)
