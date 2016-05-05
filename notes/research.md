@@ -21,7 +21,7 @@ _________________________
 _________________________
 
 ### LK - Summary:
-Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning paramaters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
+Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning parameters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
 
 The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.
 
@@ -52,11 +52,11 @@ Added complexity but may make where the type inference is occurring confusing to
 ```
 func printColor<T>(a: T) {
     if a is Int {
-        print("The hexidecimal value of your color is ", a)
+        print("The hexadecimal value of your color is ", a)
     } else if a is String {
         print("You chose the color ", a)
     } else {
-        print("Please provide the hexidecimal value or the name of your favorite color")
+        print("Please provide the hexadecimal value or the name of your favorite color")
     }
 }
 
@@ -64,7 +64,7 @@ var myColorDeci = 5649055
 var myColorStr = "purple"
 
 printColor(myColorDeci)
-// "The hexidecimal value of your color is 5649055"
+// "The hexadecimal value of your color is 5649055"
 // a is inferred as type Int
 
 printColor(myColorStr)
@@ -72,7 +72,7 @@ printColor(myColorStr)
 // a is inferred as type String
 
 printColor()
-// "Please provide the hexidecimal value or the name of your favorite color."
+// "Please provide the hexadecimal value or the name of your favorite color."
 // a is nil
 ```
 
@@ -93,8 +93,62 @@ The `swapTwoValues(_:_:)` function can now be called in the same way as `swapTwo
 ## 4. Annotate the type -
 _________________________
 
-  + when using the “as” operator to type cast
+  A. when using the “as” operator to type cast
+  -----------------
+  //When working with a hierarchy of classes and subclasses we need to be more explicit about acceptable types. Type casting can be used with a hierarchy of classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
 
-  + type coercion
+```swift
+// Create a class called Plant.
+class Plant {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
 
-  + when the compiler isn't able to infer the type on its own
+// Create a subclass of Plant called Perennial.
+class Perennial: Plant {
+    var dormantSeason: String
+    init(name: String, dormantSeason: String) {
+        self.dormantSeason = dormantSeason
+        super.init(name: name)
+    }
+}
+
+// Create a subclass of Plant called Succulent.
+class Succulent: Plant {
+    var waterStorage: String
+    init(name: String, waterStorage: String) {
+      self.waterStorage = waterStorage
+      super.init(name: name)
+    }
+}
+
+let myPlants = [
+    Perennial(name: "Fern", dormantSeason: "winter"),
+    Succulent(name: "Burro's Tail", waterStorage: "leaves")
+]
+```
+
+The type of "myPlants" is inferred to be `Plant`. If you iterate over the contents of `myPlants`, the items you receive back are typed as `Plants`, and not as `Perennial` or `Succulent`. When you have a constant or variable of a certain class type that refers to an instance of a subclass, you can try to downcast to the subclass type with `as?` or `as!`.
+
+```swift
+// Create a function that will downcast the `Plant` instances to their subclasses and access a property from their individual class.
+
+func downcastAndPrint(plants:[Plant]) {
+    for item in myPlants {
+        if let perennial = item as? Perennial {
+            print("A \(perennial.name) will be dormant during \(perennial.dormantSeason).")
+        } else if let succulent = item as? Succulent {
+            print("A \(succulent.name) stores water in its \(succulent.waterStorage).")
+        }
+    }
+}
+
+downcastAndPrint(myPlants)
+```
+
+  B. type coercion
+  -----------------
+
+  c. when the compiler isn't able to infer the type on its own
