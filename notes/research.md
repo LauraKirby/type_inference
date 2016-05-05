@@ -49,8 +49,6 @@ The other difference is that the generic function’s name `(swapTwoValues(_:_:)
 
 The `swapTwoValues(_:_:)` function can now be called in the same way as `swapTwoInts`, except that it can be passed two values of any type, as long as both of those values are of the same type as each other. Each time `swapTwoValues(_:_:)` is called, the type to use for `T` is inferred from the types of values passed to the function.
 
-except that it can be passed two values of any type, as long as both of those values are of the same type as each other
-
 ## 4. Annotate the type -
 _________________________
 
