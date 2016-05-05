@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Type Inference by LauraKirby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Type Inference</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/LauraKirby/type_inference-" class="btn">View on GitHub</a>
+      <a href="https://github.com/LauraKirby/type_inference-/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/LauraKirby/type_inference-/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="prompt" class="anchor" href="#prompt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prompt:</h2>
+
+<p>Write a short document that explains Swift’s type-inference system and why developers should care.</p>
+
+<h2>
+<a id="writers-note-to-brian-and-alex" class="anchor" href="#writers-note-to-brian-and-alex" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Writer's Note to Brian and Alex:</h2>
+
+<p>In response to the above-listed prompt, I believe good technical writing demonstrates a deep technical understanding and the ability to reach a diverse audience. Researching various themes for the sample code may engage a wider and more diverse audience [1]. Separating the content into conceptually related sections may help a learner's brain digest the new information [2]. The use of images may help visual learners understand the material [3]. My writing sample aims to document a technical topic while promote diversity inclusion.</p>
+
+<p>What do teenage girls often think about? According to Heidi Olinger, it's horses. Examples given throughout my writing sample reference a topic that is likely to be relatable by teenage girls - "horse". The concepts mentioned in connection with horses are quite simple, this was done to avoid confusing people who are not horse enthusiasts. Additionally, keeping topics simple may help keep the material understandable by non-native English speakers. Providing examples on a variety of general topics, may help people from diverse backgrounds relate to the material.</p>
+
+<p>In the article, "Chunking Information for Instruction Design", Connie Malamed states that "Content that is conceptually related is meaningful, making it easier to understand." My writing sample has been placed into three sections. The first section informs the audience of the most basic way to understand and implement the concept. The second section goes into more detail and cautions the audience of complex details. The third section encourages the audience to apply the newly learned concepts on their own. Breaking up the material into three sections may help people better digest the new material.</p>
+
+<p>There are 7 different learning styles [3]. Including diverse forms of media may help engage and teach a wider audience. Icons are implemented to help visual learners navigate the material. To ensure clarity of each icon, there will be a key at the beginning of the documentation (key not yet created). Providing various forms of media may help people with various learning styles understand the material.</p>
+
+<p>Through researching ways to engage and enhance the learning experience, my writing sample aims to document a technical topic while promoting diversity inclusion.</p>
+
+<h2>
+<a id="documentation-swifts-type-inference" class="anchor" href="#documentation-swifts-type-inference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation: Swift's Type Inference</h2>
+
+<p><img src="./images/hammer.png" alt="Build icon"> <em>Introduction.</em> Swift is a type safe language and requires every entity to have a type. Similarly to other type safe languages such as Objective-C, Java or C#, annotating the type is a common practice. In contrast, Swift's type inference system allows developers to write cleaner and more concise source code. When the compiler is not able to infer the type, we will need to annotate the type. Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.</p>
+
+<p><em>Type Safe.</em> Swift requires each entity to have a type at compile time. If an entity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.</p>
+
+<p><em>Type Annotation.</em> In Objective-C, a type must be explicitly annotated and we can do the same in Swift.</p>
+
+<p>Use type annotation to declare a variable of type <code>String</code>.</p>
+
+<div class="highlight highlight-source-swift"><pre> <span class="pl-k">var</span> groundWater: <span class="pl-c1">String</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>sourced through springs and wells<span class="pl-pds">"</span></span></pre></div>
+
+<p><em>Type Inference.</em> In addition to type annotation, Swift offers type inference. If a value is assigned to an entity at the time it is declared, then the compiler can often times infer the type. Note how the example listed below does not need to explicitly annotate a type.</p>
+
+<p>Use type inference to declare a variable of type <code>String</code>.</p>
+
+<div class="highlight highlight-source-swift"><pre> <span class="pl-k">var</span> drought <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>a shortage of water resulting from abnormally low rainfall<span class="pl-pds">"</span></span></pre></div>
+
+<p>In the example above, a variable is declared and the compiler infers the type as <code>String</code>. By decreasing the need to annotate the type, our source code is cleaner.</p>
+
+<p><img src="./images/caution_sm.png" alt="Caution icon">
+ Annotate the type when using the <code>as</code> operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.</p>
+
+<p><img src="./images/experiment_sm.png" alt="Experiment icon"> <em>Type Inference System</em>. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?</p>
+
+<p>Tip: Press <code>option + click</code> to view the inferred type.</p>
+
+<p>22. Odd ending. No recap. Nothing really to experiment with.</p>
+
+<p>23. Additional notes from review:
+    + Make writing sample more substantive
+    + More complicated examples
+    + Add example where type inference works in opposite direction
+    + Protocols
+    + Generics
+    + Due on Thursday, 5/5/16</p>
+
+<p>Sources:</p>
+
+<ol>
+<li><p>"To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger, <a href="http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger">http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger</a></p></li>
+<li><p>"Chunking Information for Instructional Design" by Connie Malamed, <a href="http://theelearningcoach.com/elearning_design/chunking-information/">http://theelearningcoach.com/elearning_design/chunking-information/</a></p></li>
+<li><p>"The 7 Styles of Learning: Which works for you?" by Katie Lepi, <a href="http://www.edudemic.com/styles-of-learning/">http://www.edudemic.com/styles-of-learning/</a></p></li>
+<li><p>"Type Safety" by Michael Hicks, <a href="http://www.pl-enthusiast.net/2014/08/05/type-safety/">http://www.pl-enthusiast.net/2014/08/05/type-safety/</a></p></li>
+</ol>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/LauraKirby/type_inference-">Type Inference</a> is maintained by <a href="https://github.com/LauraKirby">LauraKirby</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
