@@ -2,96 +2,64 @@
  Write a short document that explains Swift’s type-inference system and why developers should care.
 
 ## Writer's Note to Brian and Alex:
- The writing sample below aims to reach a diverse audience through the use new topics in the sample code. Additionally, it attempts to add a layer of organization by separating over-arching concepts within the material covered. Lastly, the writing sample considers how the use of images may help various types of learners understand the material better.
 
- Examples given throughout the documentation reference a topic not often covered in the developer community - hydrology. The concepts mentioned in connection with hydrology are quite simple, this was done to avoid confusing people who are not hydrology experts. Additionally, keeping topics simple may help keep the material understandable by non-native English speakers. By providing examples on a variety of general topics, people from diverse backgrounds may have an easier time relating to and engaging with the material.
+ In response to the above-listed prompt, I believe good technical writing demonstrates a deep technical understanding and the ability to reach a diverse audience. Researching various themes for the sample code may engage a wider and more diverse audience [1]. Separating the content into conceptually related sections may help a learner's brain digest the new information [2]. The use of images may help visual learners understand the material [3]. My writing sample aims to document a technical topic while promot diversity inclusion.
 
- In the official Swift documentation, a new language feature is presented to the audience in two sections. The first provides general information and the second offers a space for the audience to experiment. In contrast, the writing sample below presents a new language feature in three sections. The first two reshape general information by separating it into over-arching concepts of how to build with and precautions to take when implementing the newly described feature. Similar to the Swift documentation, the third section encourages the audience to apply the newly learned concepts on their own and ends the discussion.
+ What do teenage girls often think about? According to Heidi Olinger, it's horses. Examples given throughout my writing sample reference a topic that is likely to be relatable by teenage girls - "horse". The concepts mentioned in connection with horses are quite simple, this was done to avoid confusing people who are not horse enthusiats. Additionally, keeping topics simple may help keep the material understandable by non-native English speakers. Providing examples on a variety of general topics, may help people from diverse backgrounds relate to the material.
 
- Research shows that people may learn better through the use various forms of media. The three sections, in the writing sample below, are marked with icons indicating build, caution and experiment. To ensure clarity of each section, there will be a key at the beginning of the documentation (key not yet created). The icons are included to help add variety to the forms of media used within.
+ In the article, "Chunking Information for Instruction Design", Connie Malamed states that "Content that is conceptually related is meaningful, making it easier to understand." My writing sample has been placed into three sections. The first section informs the audience of the most basic way to understand and implement the concept. The second section goes into more detail and cautions the audience of complex details. The third section encourages the audience to apply the newly learned concepts on their own. Breaking up the material into three sections may help people better digest the new material.
+
+ There are 7 different learning styles [3]. Including diverse forms of media may help engage and teach a wider audience. Icons are implemented to help visual learners navigate the material. To ensure clarity of each icon, there will be a key at the beginning of the documentation (key not yet created). Providing various forms of media may help people with various learning styles understand the material.
+
+ Through researching ways to engage and enhance the learning experience, my writing sample aims to document a technical topic while promoting diversity inclusion.
+
 
 ## Documentation: Swift's Type Inference
- ![Build icon](./images/build_sm.png) *Introduction.* Swift requires the types of variables and constants to be declared. As you may have seen before, explicit declaration is the traditional way of type declaration. Swift's type inference is a cleaner and faster way to declare types. While explicit declaration might be rarely required, it is important to consider its usefulness in maintaining readability. Experimenting with type inference in a Playground will demonstrate the breadth of Swift's compiler and type inference system.
+ ![Build icon](./images/hammer.png) *Introduction.* Swift is a type safe language and requires every entity to have a type. Similarly to other type safe languages such as Objective-C, Java or C#, annotating the type is a common practice. In contrast, Swift's type inference system allows developers to write cleaner and more concise source code. When the compiler is not able to infer the type, we will need to annotate the type. Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.
 
-  7\. The icons are good but this one is often used for "settings".
+ *Type Safe.* Swift requires each entity to have a type at compile time. If an entity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.
 
-  8\. Every entity must have a type.
+ *Type Annotation.* In Objective-C, a type must be explicitly annotated and we can do the same in Swift.
 
-  9\. Let the audience know where they may have seen this before.
+ Use type annotation to declare a variable of type `String`.
 
-  10\. What is "faster"?
-
- *Type Declaration.* Similar to Objective-C, Swift requires each type to be declared. By declaring the types of constants and variables, our source code is less likely to crash and easier to debug during runtime.
-
-  11\. Clarify the difference between "type declaration" and "type inference." When do you use each?
-
-  12\. The code is "less likely" to crash in comparison to what?
-
-  13\. Why is the code easier to debug during runtime?
-
- *Explicit Type Declaration.* In Objective-C type must be explicitly written and we can do the same in Swift.
-
-  14\. Add comma after "Objective-C."
-
-  15\. Add article before "type."
-
-  ```swift
- //Example 1:
- var waterfall: String
-
- //Example 2:
+ ```swift
  var groundWater: String = "sourced through springs and wells"
  ```
 
- In "Example 1", listed above, the explicit type declaration will allow the compiler to allocate sufficient space for a variable that will eventually be of type String. "Example 2" shows how a variable can be declared with a type and a value.
+ *Type Inference.* In addition to type annotation, Swift offers type inference. If a value is assigned to an entity at the time it is declared, then the compiler can often times infer the type. Note how the example listed below does not need to explicitly annotate a type.
 
-  16\. New topic is brought in, "compiler to allocate sufficient space". Where is this "space" being created?
-
-  17\. When discussing allocation, initialization should be covered.
-
- *Implicit Type Declaration.* In addition to explicitly declaring types, Swift offers type inference also known as implicit type declaration. If a value is assigned to a variable or constant at the time it is declared, then the compiler can infer the type. Note how the example listed below does not need to explicitly declare a type.
+ Use type inference to declare a variable of type `String`.
 
  ```swift
  var drought = "a shortage of water resulting from abnormally low rainfall"
  ```
 
- In the example above, the compiler automatically declares the variable `drought` as type `String`. Type inference cleans up our source code by decreasing the need repeatedly write type declarations.
-
-  18\. You are the one who declared the variable and the complier inferred it as type string.
+ In the example above, a variable is declared and the compiler infers the type as `String`. By decreasing the need to annotate the type, our source code is cleaner.
 
  ![Caution icon](./images/caution_sm.png)
- *Maintaining Readability.* While type inference may allow us to write less code, it is important to keep in mind that code readability is an asset to our source code. If we assign the value of a variable to the result of a function call, then we may have a hard time remembering the return type.
-
-  19\. Makes sense in dynamically typed language, not really in statically typed language.
-
-  20\. Annotate the type: when using the “as” operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.
-
- Declare a function called 'findDrought' that will return the year and month a new drought began in California. The function should return a number of type Double.
-
- ```swift
- func findDroughtDate() -> Double {
-     let year = 2013.0
-     let month = 0.01
-     return month + year
- }
- ```
-
- In the developer community, dates are often returned from functions as `Integers`. After we have written a few hundred lines of source code, we may forget that `findDroughtDate` returns a `Double`. Maintain readability by explicitly declaring the type when the variable is declared.
-
- ```swift
- let caDrought: Double = findDroughtDate()
- ```
+ Annotate the type when using the `as` operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.
 
  ![Experiment icon](./images/experiment_sm.png) *Type Inference System*. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?
 
-  21\. How do we know that the type was inferred as a `Double` and not a `Float`?
+ Tip: Press `option + click` to view the inferred type.
 
-  22\. Odd ending. No recap. Nothing really to experiment with.
+ 22\. Odd ending. No recap. Nothing really to experiment with.
 
-  23\. Additional notes from review:
+ 23\. Additional notes from review:
     + Make writing sample more substantive
     + More complicated examples
     + Add example where type inference works in opposite direction
     + Protocols
     + Generics
     + Due on Thursday, 5/5/16
+
+Sources:
+
+1. "To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger, http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger
+
+2. "Chunking Information for Instructional Design" by Connie Malamed, http://theelearningcoach.com/elearning_design/chunking-information/
+
+3. "The 7 Styles of Learning: Which works for you?" by Katie Lepi, http://www.edudemic.com/styles-of-learning/
+
+4. "Type Safety" by Michael Hicks, http://www.pl-enthusiast.net/2014/08/05/type-safety/
