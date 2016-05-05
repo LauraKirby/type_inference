@@ -2,7 +2,6 @@
 
 ## 1. Type inference in both directions
 _________________________
-### LK - Summary:
 Incomplete.
 
 ## 2. Protocols
