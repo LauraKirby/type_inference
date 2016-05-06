@@ -108,10 +108,10 @@ Swift's type inference system makes our source code readable and compact by decr
 
 Sources:
 
-1. "To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger, http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger
+1. ["To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger](http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger)
 
-2. "Chunking Information for Instructional Design" by Connie Malamed, http://theelearningcoach.com/elearning_design/chunking-information/
+2. ["Chunking Information for Instructional Design" by Connie Malamed](http://theelearningcoach.com/elearning_design/chunking-information/)
 
-3. "Type Safety" by Michael Hicks, http://www.pl-enthusiast.net/2014/08/05/type-safety/
+3. ["Type Safety" by Michael Hicks](http://www.pl-enthusiast.net/2014/08/05/type-safety/)
 
-4. "The Swift Programming Language (Swift 2.2)", https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
+4. ["The Swift Programming Language (Swift 2.2)"](https://developer.apple.com/library/)ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
