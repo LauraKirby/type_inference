@@ -1,5 +1,5 @@
-## Prompt:
-Write a short document that explains Swift’s type-inference system and why developers should care.
+### Prompt: Write a short document that explains Swift’s type-inference system and why developers should care.
+--------------------------
 
 ## Documentation: Swift’s Type-inference System
 In "Part 1: Type Inference," we will cover the basics of Swift's type inference system by describing type safety and generic functions. In "Part 2: Type Inference & Type Annotation," we will walk through an example that uses both type inference and type annotation for type casting.
@@ -43,10 +43,10 @@ printChosenColor(myColorName, b: myColorDecimal)
 ```
 
 ## Part 2: Type Inference & Type Annotation
-As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code dynamic.
+As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code more dynamic.
 
 #### Type Casting
-When working with a hierarchy of classes and subclasses we need to be explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
+When working with a hierarchy of classes and subclasses we need to be more explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
 
 ```swift
 // Create a class called Plant.
@@ -89,7 +89,7 @@ let myPlants = [
 The `as?` operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the `as!` operator.
 
 ```swift
-// Create a function that will iterate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.
+// Create a function that will interate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.
 
 func downcastAndPrint(plants:[Plant]) {
     for item in plants {
@@ -105,13 +105,3 @@ downcastAndPrint(myPlants)
 ```
 
 Swift's type inference system makes our source code readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source code flexible and dynamic by permitting various types and downcasting others.
-
-Sources:
-
-1. "To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger, http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger
-
-2. "Chunking Information for Instructional Design" by Connie Malamed, http://theelearningcoach.com/elearning_design/chunking-information/
-
-3. "Type Safety" by Michael Hicks, http://www.pl-enthusiast.net/2014/08/05/type-safety/
-
-4. "The Swift Programming Language (Swift 2.2)", https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
