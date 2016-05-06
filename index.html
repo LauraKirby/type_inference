@@ -40,11 +40,10 @@
 
       <div class="highlight highlight-source-swift">
         <pre>
-          <span class="pl-c">// Create a variable and annotate the type as `String`.</span>
+          <span class="pl-c">// Create a variable and annotate the type as String.</span>
           <span class="pl-k">var</span> groundWater: <span class="pl-c1">String</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>sourced through springs and wells<span class="pl-pds">"</span></span>
 
-          <span class="pl-c">// Create a variable and allow Swift's type inference system to deduce the type `String`.</span>
-
+          <span class="pl-c">// Create a variable and allow Swift's type inference system to deduce the type String.</span>
           <span class="pl-k">var</span> drought <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>a shortage of water resulting from abnormally low rainfall<span class="pl-pds">"</span></span>
         </pre>
       </div>
@@ -64,7 +63,6 @@
       <div class="highlight highlight-source-swift">
         <pre>
           <span class="pl-c">// Define a generic function with two placeholder parameters.</span>
-
           <span class="pl-k">func</span> <span class="pl-en">printChosenColor</span>&lt;T,U&gt;(a: T, b: U) {
               <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>You chose the color:<span class="pl-pds">"</span></span>, a, b)
           }
@@ -135,11 +133,10 @@
       <div class="highlight highlight-source-swift">
         <pre>
           <span class="pl-c">// Create an array that will store an instance of Perennial and Succulent.</span>
-
           <span class="pl-k">let</span> myPlants <span class="pl-k">=</span> [
           Perennial(name: <span class="pl-s"><span class="pl-pds">"</span>Fern<span class="pl-pds">"</span></span>, dormantSeason: <span class="pl-s"><span class="pl-pds">"</span>winter<span class="pl-pds">"</span></span>),
           Succulent(name: <span class="pl-s"><span class="pl-pds">"</span>Burro's Tail<span class="pl-pds">"</span></span>, waterStorage: <span class="pl-s"><span class="pl-pds">"</span>leaves<span class="pl-pds">"</span></span>)
-        ]
+          ]
 
           <span class="pl-c">// The myPlants array is composed of instances from a common super class Plants.</span>
           <span class="pl-c">// Array items in myPlants will be inferred as type Plants.</span>
