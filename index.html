@@ -100,29 +100,40 @@
 
       <p>When an array is composed of items with different classes, type inference will try to find a common super class.</p>
 
-      <div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create an array that will store an instance of Perennial and Succulent.</span>
-      <span class="pl-k">let</span> myPlants <span class="pl-k">=</span> [
+      <div class="highlight highlight-source-swift">
+        <pre>
+          <span class="pl-c">// Create an array that will store an instance of Perennial and Succulent.</span>
+
+          <span class="pl-k">let</span> myPlants <span class="pl-k">=</span> [
           Perennial(name: <span class="pl-s"><span class="pl-pds">"</span>Fern<span class="pl-pds">"</span></span>, dormantSeason: <span class="pl-s"><span class="pl-pds">"</span>winter<span class="pl-pds">"</span></span>),
           Succulent(name: <span class="pl-s"><span class="pl-pds">"</span>Burro's Tail<span class="pl-pds">"</span></span>, waterStorage: <span class="pl-s"><span class="pl-pds">"</span>leaves<span class="pl-pds">"</span></span>)
-      ]
+        ]
 
-      <span class="pl-c">// The `myPlants` array is composed of instances from a common super class `Plants`.  Array items in `myPlants` will be inferred as type `Plants`.</span></pre></div>
+          <span class="pl-c">// The myPlants array is composed of instances from a common super class Plants.</span>
+          <span class="pl-c">// Array items in myPlants will be inferred as type Plants.</span>
+        </pre>
+      </div>
 
       <p>The <code>as?</code> operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the <code>as!</code> operator.</p>
 
-      <div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create a function that will iterate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.</span>
+      <div class="highlight highlight-source-swift">
+        <pre>
+          <span class="pl-c">// Create a function that will iterate over each item in myPlants, downcast each Plant </span>
+          <span class="pl-c">// instance to its subclass, and then access a property from its newly identified class.</span>
 
-      <span class="pl-k">func</span> <span class="pl-en">downcastAndPrint</span>(plants:[Plant]) {
-          <span class="pl-k">for</span> item <span class="pl-k">in</span> plants {
-              <span class="pl-k">if</span> <span class="pl-k">let</span> perennial <span class="pl-k">=</span> item <span class="pl-k">as?</span> Perennial {
-                  <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>A <span class="pl-pse">\(</span><span class="pl-s1">perennial<span class="pl-k">.</span>name</span><span class="pl-pse">)</span> will be dormant during <span class="pl-pse">\(</span><span class="pl-s1">perennial<span class="pl-k">.</span>dormantSeason</span><span class="pl-pse">)</span>.<span class="pl-pds">"</span></span>)
-              } <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-k">let</span> succulent <span class="pl-k">=</span> item <span class="pl-k">as?</span> Succulent {
-                  <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>A <span class="pl-pse">\(</span><span class="pl-s1">succulent<span class="pl-k">.</span>name</span><span class="pl-pse">)</span> stores water in its <span class="pl-pse">\(</span><span class="pl-s1">succulent<span class="pl-k">.</span>waterStorage</span><span class="pl-pse">)</span>.<span class="pl-pds">"</span></span>)
+          <span class="pl-k">func</span> <span class="pl-en">downcastAndPrint</span>(plants:[Plant]) {
+              <span class="pl-k">for</span> item <span class="pl-k">in</span> plants {
+                  <span class="pl-k">if</span> <span class="pl-k">let</span> perennial <span class="pl-k">=</span> item <span class="pl-k">as?</span> Perennial {
+                      <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>A <span class="pl-pse">\(</span><span class="pl-s1">perennial<span class="pl-k">.</span>name</span><span class="pl-pse">)</span> will be dormant during <span class="pl-pse">\(</span><span class="pl-s1">perennial<span class="pl-k">.</span>dormantSeason</span><span class="pl-pse">)</span>.<span class="pl-pds">"</span></span>)
+                  } <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-k">let</span> succulent <span class="pl-k">=</span> item <span class="pl-k">as?</span> Succulent {
+                      <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>A <span class="pl-pse">\(</span><span class="pl-s1">succulent<span class="pl-k">.</span>name</span><span class="pl-pse">)</span> stores water in its <span class="pl-pse">\(</span><span class="pl-s1">succulent<span class="pl-k">.</span>waterStorage</span><span class="pl-pse">)</span>.<span class="pl-pds">"</span></span>)
+                  }
               }
           }
-      }
 
-      downcastAndPrint(myPlants)</pre></div>
+          downcastAndPrint(myPlants)
+        </pre>
+      </div>
 
       <p>Swift's type inference system makes our source code readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source code flexible and dynamic by permitting various types and downcasting others.</p>
 
