@@ -86,13 +86,13 @@ let myPlants = [
 
 // The `myPlants` array is composed of instances from a common super class `Plants`.  Array items in `myPlants` will be inferred as type `Plants`.
 ```
-To access a subclass we can try downcasting using the `as?` or `as!` operator.
+The `as?` operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the `as!` operator.
 
 ```swift
-// Create a function that will downcast the Plant instances to their subclasses, then access a property from their newly identified class.
+// Create a function that will interate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.
 
 func downcastAndPrint(plants:[Plant]) {
-    for item in myPlants {
+    for item in plants {
         if let perennial = item as? Perennial {
             print("A \(perennial.name) will be dormant during \(perennial.dormantSeason).")
         } else if let succulent = item as? Succulent {
