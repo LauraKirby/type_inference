@@ -20,63 +20,126 @@
 
     <section class="main-content">
       <h2>
-<a id="writers-note-to-brian-and-alex" class="anchor" href="#writers-note-to-brian-and-alex" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Writer's Note to Brian and Alex:</h2>
+<a id="prompt" class="anchor" href="#prompt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prompt:</h2>
 
-<p>In response to the above-listed prompt, I believe good technical writing demonstrates a deep technical understanding and the ability to reach a diverse audience. Researching various themes for the sample code may engage a wider and more diverse audience [1]. Separating the content into conceptually related sections may help a learner's brain digest the new information [2]. The use of images may help visual learners understand the material [3]. My writing sample aims to document a technical topic while promote diversity inclusion.</p>
-
-<p>What do teenage girls often think about? According to Heidi Olinger, it's horses. Examples given throughout my writing sample reference a topic that is likely to be relatable by teenage girls - "horse". The concepts mentioned in connection with horses are quite simple, this was done to avoid confusing people who are not horse enthusiasts. Additionally, keeping topics simple may help keep the material understandable by non-native English speakers. Providing examples on a variety of general topics, may help people from diverse backgrounds relate to the material.</p>
-
-<p>In the article, "Chunking Information for Instruction Design", Connie Malamed states that "Content that is conceptually related is meaningful, making it easier to understand." My writing sample has been placed into three sections. The first section informs the audience of the most basic way to understand and implement the concept. The second section goes into more detail and cautions the audience of complex details. The third section encourages the audience to apply the newly learned concepts on their own. Breaking up the material into three sections may help people better digest the new material.</p>
-
-<p>There are 7 different learning styles [3]. Including diverse forms of media may help engage and teach a wider audience. Icons are implemented to help visual learners navigate the material. To ensure clarity of each icon, there will be a key at the beginning of the documentation (key not yet created). Providing various forms of media may help people with various learning styles understand the material.</p>
-
-<p>Through researching ways to engage and enhance the learning experience, my writing sample aims to document a technical topic while promoting diversity inclusion.</p>
+<p>Write a short document that explains Swift’s type-inference system and why developers should care.</p>
 
 <h2>
-<a id="documentation-swifts-type-inference" class="anchor" href="#documentation-swifts-type-inference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation: Swift's Type Inference</h2>
+<a id="documentation-swifts-type-inference-system" class="anchor" href="#documentation-swifts-type-inference-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation: Swift’s Type-inference System</h2>
 
-<p><img src="./images/hammer.png" alt="Build icon"> <em>Introduction.</em> Swift is a type safe language and requires every entity to have a type. Similarly to other type safe languages such as Objective-C, Java or C#, annotating the type is a common practice. In contrast, Swift's type inference system allows developers to write cleaner and more concise source code. When the compiler is not able to infer the type, we will need to annotate the type. Using sample code to experiment in a Playground can demonstrate the complex cases that Swift's type inference system is prepared to handle.</p>
+<p>In "Part 1: Type Inference," we will cover the basics of Swift's type inference system by describing type safety and generic functions. In "Part 2: Type Inference &amp; Type Annotation," we will walk through an example that uses both type inference and type annotation for type casting.</p>
 
-<p><em>Type Safe.</em> Swift requires each entity to have a type at compile time. If an entity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.</p>
+<h2>
+<a id="part-1-type-inference" class="anchor" href="#part-1-type-inference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: Type Inference</h2>
 
-<p><em>Type Annotation.</em> In Objective-C, a type must be explicitly annotated and we can do the same in Swift.</p>
+<p>If you have experience with type safe languages such as Objective-C, Java or C#, you know that type must be annotated each time a new expression is created. In addition to type annotation, Swift uses type inference to identify a type. Type inference is the process by which the compiler can evaluate the values you provide and conclude the type of a particular expression. Type inference cleans up our source code by decreasing the need to write repetitive type identifiers that can be inferred by the compiler.</p>
 
-<p>Use type annotation to declare a variable of type <code>String</code>.</p>
+<h4>
+<a id="type-safety" class="anchor" href="#type-safety" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type Safety</h4>
 
-<div class="highlight highlight-source-swift"><pre> <span class="pl-k">var</span> groundWater: <span class="pl-c1">String</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>sourced through springs and wells<span class="pl-pds">"</span></span></pre></div>
+<p>Swift is a type safe language and requires every expression to have a type at compile-time. If an expression is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.</p>
 
-<p><em>Type Inference.</em> In addition to type annotation, Swift offers type inference. If a value is assigned to an entity at the time it is declared, then the compiler can often times infer the type. Note how the example listed below does not need to explicitly annotate a type.</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create a variable and annotate the type as `String`.</span>
+<span class="pl-k">var</span> groundWater: <span class="pl-c1">String</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>sourced through springs and wells<span class="pl-pds">"</span></span>
 
-<p>Use type inference to declare a variable of type <code>String</code>.</p>
+<span class="pl-c">// Create a variable and allow Swift's type inference system to deduce the type `String`.</span>
+<span class="pl-k">var</span> drought <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>a shortage of water resulting from abnormally low rainfall<span class="pl-pds">"</span></span></pre></div>
 
-<div class="highlight highlight-source-swift"><pre> <span class="pl-k">var</span> drought <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>a shortage of water resulting from abnormally low rainfall<span class="pl-pds">"</span></span></pre></div>
+<h4>
+<a id="generic-functions" class="anchor" href="#generic-functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generic Functions</h4>
 
-<p>In the example above, a variable is declared and the compiler infers the type as <code>String</code>. By decreasing the need to annotate the type, our source code is cleaner.</p>
+<p>Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with <em>type parameters</em>, meaning parameters that are annotated with a <em>placeholder</em> for a type instead of an <em>actual</em> type (e.g. <code>String</code>, <code>Int</code>). Type parameters allow the parameter type to be inferred by the argument type each time the function is called. Creating generic functions that rely on type inference allows us to write less code because we can reuse the same function for different argument types.</p>
 
-<p><img src="./images/caution_sm.png" alt="Caution icon">
- Annotate the type when using the <code>as</code> operator to type cast, type coercion, when the compiler isn't able to infer the type on its own.</p>
+<p>The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.</p>
 
-<p><img src="./images/experiment_sm.png" alt="Experiment icon"> <em>Type Inference System</em>. What type does the compiler infer when we create and constant and store the result of multiplying 5 times 10.3?</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">// Define a generic function with two placeholder parameters.</span>
 
-<p>Tip: Press <code>option + click</code> to view the inferred type.</p>
+<span class="pl-k">func</span> <span class="pl-en">printChosenColor</span>&lt;T,U&gt;(a: T, b: U) {
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>You chose the color:<span class="pl-pds">"</span></span>, a, b)
+}
 
-<p>22. Odd ending. No recap. Nothing really to experiment with.</p>
+<span class="pl-k">var</span> myColorDecimal <span class="pl-k">=</span> <span class="pl-c1">5649055</span>
+<span class="pl-k">var</span> myColorName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>purple<span class="pl-pds">"</span></span>
 
-<p>23. Additional notes from review:
-    + Make writing sample more substantive
-    + More complicated examples
-    + Add example where type inference works in opposite direction
-    + Protocols
-    + Generics
-    + Due on Thursday, 5/5/16</p>
+printChosenColor(myColorDecimal, b: myColorName)
+<span class="pl-c">// You chose the color: 5649055 purple</span>
+<span class="pl-c">// a is inferred as type Int, while b is inferred as type String</span>
+
+printChosenColor(myColorName, b: myColorDecimal)
+<span class="pl-c">// You chose the color: purple 5649055</span>
+<span class="pl-c">// a is inferred as type String, while b is inferred as type Int</span></pre></div>
+
+<h2>
+<a id="part-2-type-inference--type-annotation" class="anchor" href="#part-2-type-inference--type-annotation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: Type Inference &amp; Type Annotation</h2>
+
+<p>As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code dynamic.</p>
+
+<h4>
+<a id="type-casting" class="anchor" href="#type-casting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type Casting</h4>
+
+<p>When working with a hierarchy of classes and subclasses we need to be explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create a class called Plant.</span>
+<span class="pl-k">class</span> Plant {
+    <span class="pl-k">var</span> name: <span class="pl-c1">String</span>
+    <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>) {
+        <span class="pl-k">self</span><span class="pl-k">.</span>name <span class="pl-k">=</span> name
+    }
+}
+
+<span class="pl-c">// Create a subclass of Plant called Perennial.</span>
+<span class="pl-k">class</span> Perennial: Plant {
+    <span class="pl-k">var</span> dormantSeason: <span class="pl-c1">String</span>
+    <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>, dormantSeason: <span class="pl-c1">String</span>) {
+        <span class="pl-k">self</span><span class="pl-k">.</span>dormantSeason <span class="pl-k">=</span> dormantSeason
+        <span class="pl-k">super</span><span class="pl-k">.</span><span class="pl-k">init</span>(name: name)
+    }
+}
+
+<span class="pl-c">// Create a subclass of Plant called Succulent.</span>
+<span class="pl-k">class</span> Succulent: Plant {
+    <span class="pl-k">var</span> waterStorage: <span class="pl-c1">String</span>
+    <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>, waterStorage: <span class="pl-c1">String</span>) {
+      <span class="pl-k">self</span><span class="pl-k">.</span>waterStorage <span class="pl-k">=</span> waterStorage
+      <span class="pl-k">super</span><span class="pl-k">.</span><span class="pl-k">init</span>(name: name)
+    }
+}</pre></div>
+
+<p>When an array is composed of items with different classes, type inference will try to find a common super class.</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create an array that will store an instance of Perennial and Succulent.</span>
+<span class="pl-k">let</span> myPlants <span class="pl-k">=</span> [
+    Perennial(name: <span class="pl-s"><span class="pl-pds">"</span>Fern<span class="pl-pds">"</span></span>, dormantSeason: <span class="pl-s"><span class="pl-pds">"</span>winter<span class="pl-pds">"</span></span>),
+    Succulent(name: <span class="pl-s"><span class="pl-pds">"</span>Burro's Tail<span class="pl-pds">"</span></span>, waterStorage: <span class="pl-s"><span class="pl-pds">"</span>leaves<span class="pl-pds">"</span></span>)
+]
+
+<span class="pl-c">// The `myPlants` array is composed of instances from a common super class `Plants`.  Array items in `myPlants` will be inferred as type `Plants`.</span></pre></div>
+
+<p>The <code>as?</code> operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the <code>as!</code> operator.</p>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create a function that will iterate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.</span>
+
+<span class="pl-k">func</span> <span class="pl-en">downcastAndPrint</span>(plants:[Plant]) {
+    <span class="pl-k">for</span> item <span class="pl-k">in</span> plants {
+        <span class="pl-k">if</span> <span class="pl-k">let</span> perennial <span class="pl-k">=</span> item <span class="pl-k">as?</span> Perennial {
+            <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>A <span class="pl-pse">\(</span><span class="pl-s1">perennial<span class="pl-k">.</span>name</span><span class="pl-pse">)</span> will be dormant during <span class="pl-pse">\(</span><span class="pl-s1">perennial<span class="pl-k">.</span>dormantSeason</span><span class="pl-pse">)</span>.<span class="pl-pds">"</span></span>)
+        } <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-k">let</span> succulent <span class="pl-k">=</span> item <span class="pl-k">as?</span> Succulent {
+            <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>A <span class="pl-pse">\(</span><span class="pl-s1">succulent<span class="pl-k">.</span>name</span><span class="pl-pse">)</span> stores water in its <span class="pl-pse">\(</span><span class="pl-s1">succulent<span class="pl-k">.</span>waterStorage</span><span class="pl-pse">)</span>.<span class="pl-pds">"</span></span>)
+        }
+    }
+}
+
+downcastAndPrint(myPlants)</pre></div>
+
+<p>Swift's type inference system makes our source code readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source code flexible and dynamic by permitting various types and downcasting others.</p>
 
 <p>Sources:</p>
 
 <ol>
 <li><p>"To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger, <a href="http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger">http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger</a></p></li>
 <li><p>"Chunking Information for Instructional Design" by Connie Malamed, <a href="http://theelearningcoach.com/elearning_design/chunking-information/">http://theelearningcoach.com/elearning_design/chunking-information/</a></p></li>
-<li><p>"The 7 Styles of Learning: Which works for you?" by Katie Lepi, <a href="http://www.edudemic.com/styles-of-learning/">http://www.edudemic.com/styles-of-learning/</a></p></li>
 <li><p>"Type Safety" by Michael Hicks, <a href="http://www.pl-enthusiast.net/2014/08/05/type-safety/">http://www.pl-enthusiast.net/2014/08/05/type-safety/</a></p></li>
+<li><p>"The Swift Programming Language (Swift 2.2)", <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html">https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html</a></p></li>
 </ol>
 
       <footer class="site-footer">
