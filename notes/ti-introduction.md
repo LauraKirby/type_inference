@@ -104,4 +104,4 @@ func downcastAndPrint(plants:[Plant]) {
 downcastAndPrint(myPlants)
 ```
 
-Swift's type inference system makes our source code more readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source flexible and more dynamic by permitting various types and type casting others.
+Swift's type inference system makes our source code readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source code flexible and dynamic by permitting various types and downcasting others.
