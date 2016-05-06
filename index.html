@@ -23,82 +23,114 @@
       <p>In "Part 1: Type Inference," we will cover the basics of Swift's type inference system and how it can help us adhere to Swift's type safe requirements while keeping our source code concise. Then we will review how type inference is used in generic functions to make our code flexible and reusable with placeholder parameters. In "Part 2: Type Inference &amp; Type Annotation," we will walk through an example that demonstrates how type inference and type annotation can be used with type casting to create dynamic source code. </p>
 
       <h2>
-      <a id="part-1-type-inference" class="anchor" href="#part-1-type-inference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: Type Inference</h2>
+        <a id="part-1-type-inference" class="anchor" href="#part-1-type-inference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: Type Inference
+      </h2>
 
-      <p>If you have experience with type safe languages such as Objective-C, Java or C#, you know that type must be annotated each time a new expression is created. In addition to type annotation, Swift uses type inference to identify a type. Type inference is the process by which the compiler can evaluate the values you provide and conclude the type of a particular expression. Type inference cleans up our source code by decreasing the need to write repetitive type identifiers that can be inferred by the compiler.</p>
-
-      <h3>
-      <a id="type-safety" class="anchor" href="#type-safety" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type Safety</h3>
-
-      <p>Swift is a type safe language and requires every expression to have a type at compile-time. If an expression is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.</p>
-
-      <div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create a variable and annotate the type as `String`.</span>
-      <span class="pl-k">var</span> groundWater: <span class="pl-c1">String</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>sourced through springs and wells<span class="pl-pds">"</span></span>
-
-      <span class="pl-c">// Create a variable and allow Swift's type inference system to deduce the type `String`.</span>
-      <span class="pl-k">var</span> drought <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>a shortage of water resulting from abnormally low rainfall<span class="pl-pds">"</span></span></pre></div>
+      <p>
+        If you have experience with type safe languages such as Objective-C, Java or C#, you know that type must be annotated each time a new expression is created. In addition to type annotation, Swift uses type inference to identify a type. Type inference is the process by which the compiler can evaluate the values you provide and conclude the type of a particular expression. Type inference cleans up our source code by decreasing the need to write repetitive type identifiers that can be inferred by the compiler.
+      </p>
 
       <h3>
-      <a id="generic-functions" class="anchor" href="#generic-functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generic Functions</h3>
+        <a id="type-safety" class="anchor" href="#type-safety" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type Safety
+      </h3>
 
-      <p>Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with <em>type parameters</em>, meaning parameters that are annotated with a <em>placeholder</em> for a type instead of an <em>actual</em> type (e.g. <code>String</code>, <code>Int</code>). Type parameters allow the parameter type to be inferred by the argument type each time the function is called. Creating generic functions that rely on type inference allows us to write less code because we can reuse the same function for different argument types.</p>
+      <p>
+        Swift is a type safe language and requires every expression to have a type at compile-time. If an expression is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.
+      </p>
 
-      <p>The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.</p>
+      <div class="highlight highlight-source-swift">
+        <pre>
+          <span class="pl-c">// Create a variable and annotate the type as `String`.</span>
+          <span class="pl-k">var</span> groundWater: <span class="pl-c1">String</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>sourced through springs and wells<span class="pl-pds">"</span></span>
 
-      <div class="highlight highlight-source-swift"><pre><span class="pl-c">// Define a generic function with two placeholder parameters.</span>
+          <span class="pl-c">// Create a variable and allow Swift's type inference system to deduce the type `String`.</span>
 
-      <span class="pl-k">func</span> <span class="pl-en">printChosenColor</span>&lt;T,U&gt;(a: T, b: U) {
-          <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>You chose the color:<span class="pl-pds">"</span></span>, a, b)
-      }
+          <span class="pl-k">var</span> drought <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>a shortage of water resulting from abnormally low rainfall<span class="pl-pds">"</span></span>
+        </pre>
+      </div>
 
-      <span class="pl-k">var</span> myColorDecimal <span class="pl-k">=</span> <span class="pl-c1">5649055</span>
-      <span class="pl-k">var</span> myColorName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>purple<span class="pl-pds">"</span></span>
+      <h3>
+        <a id="generic-functions" class="anchor" href="#generic-functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generic Functions
+      </h3>
 
-      printChosenColor(myColorDecimal, b: myColorName)
-      <span class="pl-c">// You chose the color: 5649055 purple</span>
-      <span class="pl-c">// a is inferred as type Int, while b is inferred as type String</span>
+      <p>
+        Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with <em>type parameters</em>, meaning parameters that are annotated with a <em>placeholder</em> for a type instead of an <em>actual</em> type (e.g. <code>String</code>, <code>Int</code>). Type parameters allow the parameter type to be inferred by the argument type each time the function is called. Creating generic functions that rely on type inference allows us to write less code because we can reuse the same function for different argument types.
+      </p>
 
-      printChosenColor(myColorName, b: myColorDecimal)
-      <span class="pl-c">// You chose the color: purple 5649055</span>
-      <span class="pl-c">// a is inferred as type String, while b is inferred as type Int</span></pre></div>
+      <p>
+        The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.
+      </p>
+
+      <div class="highlight highlight-source-swift">
+        <pre>
+          <span class="pl-c">// Define a generic function with two placeholder parameters.</span>
+
+          <span class="pl-k">func</span> <span class="pl-en">printChosenColor</span>&lt;T,U&gt;(a: T, b: U) {
+              <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>You chose the color:<span class="pl-pds">"</span></span>, a, b)
+          }
+
+          <span class="pl-k">var</span> myColorDecimal <span class="pl-k">=</span> <span class="pl-c1">5649055</span>
+          <span class="pl-k">var</span> myColorName <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>purple<span class="pl-pds">"</span></span>
+
+          printChosenColor(myColorDecimal, b: myColorName)
+          <span class="pl-c">// You chose the color: 5649055 purple</span>
+          <span class="pl-c">// a is inferred as type Int, while b is inferred as type String</span>
+
+          printChosenColor(myColorName, b: myColorDecimal)
+          <span class="pl-c">// You chose the color: purple 5649055</span>
+          <span class="pl-c">// a is inferred as type String, while b is inferred as type Int</span>
+        </pre>
+      </div>
 
       <h2>
-      <a id="part-2-type-inference--type-annotation" class="anchor" href="#part-2-type-inference--type-annotation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: Type Inference &amp; Type Annotation</h2>
+        <a id="part-2-type-inference--type-annotation" class="anchor" href="#part-2-type-inference--type-annotation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: Type Inference &amp; Type Annotation
+      </h2>
 
-      <p>As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code dynamic.</p>
+      <p>
+        As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code dynamic.
+      </p>
 
       <h3>
-      <a id="type-casting" class="anchor" href="#type-casting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type Casting</h3>
+        <a id="type-casting" class="anchor" href="#type-casting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Type Casting
+      </h3>
 
-      <p>When working with a hierarchy of classes and subclasses we need to be explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.</p>
+      <p>
+        When working with a hierarchy of classes and subclasses we need to be explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
+      </p>
 
-      <div class="highlight highlight-source-swift"><pre><span class="pl-c">// Create a class called Plant.</span>
-      <span class="pl-k">class</span> Plant {
-          <span class="pl-k">var</span> name: <span class="pl-c1">String</span>
-          <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>) {
-              <span class="pl-k">self</span><span class="pl-k">.</span>name <span class="pl-k">=</span> name
+      <div class="highlight highlight-source-swift">
+        <pre>
+          <span class="pl-c">// Create a class called Plant.</span>
+          <span class="pl-k">class</span> Plant {
+              <span class="pl-k">var</span> name: <span class="pl-c1">String</span>
+              <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>) {
+                  <span class="pl-k">self</span><span class="pl-k">.</span>name <span class="pl-k">=</span> name
+              }
           }
-      }
 
-      <span class="pl-c">// Create a subclass of Plant called Perennial.</span>
-      <span class="pl-k">class</span> Perennial: Plant {
-          <span class="pl-k">var</span> dormantSeason: <span class="pl-c1">String</span>
-          <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>, dormantSeason: <span class="pl-c1">String</span>) {
-              <span class="pl-k">self</span><span class="pl-k">.</span>dormantSeason <span class="pl-k">=</span> dormantSeason
-              <span class="pl-k">super</span><span class="pl-k">.</span><span class="pl-k">init</span>(name: name)
+          <span class="pl-c">// Create a subclass of Plant called Perennial.</span>
+          <span class="pl-k">class</span> Perennial: Plant {
+              <span class="pl-k">var</span> dormantSeason: <span class="pl-c1">String</span>
+              <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>, dormantSeason: <span class="pl-c1">String</span>) {
+                  <span class="pl-k">self</span><span class="pl-k">.</span>dormantSeason <span class="pl-k">=</span> dormantSeason
+                  <span class="pl-k">super</span><span class="pl-k">.</span><span class="pl-k">init</span>(name: name)
+              }
           }
-      }
 
-      <span class="pl-c">// Create a subclass of Plant called Succulent.</span>
-      <span class="pl-k">class</span> Succulent: Plant {
-          <span class="pl-k">var</span> waterStorage: <span class="pl-c1">String</span>
-          <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>, waterStorage: <span class="pl-c1">String</span>) {
-            <span class="pl-k">self</span><span class="pl-k">.</span>waterStorage <span class="pl-k">=</span> waterStorage
-            <span class="pl-k">super</span><span class="pl-k">.</span><span class="pl-k">init</span>(name: name)
+          <span class="pl-c">// Create a subclass of Plant called Succulent.</span>
+          <span class="pl-k">class</span> Succulent: Plant {
+              <span class="pl-k">var</span> waterStorage: <span class="pl-c1">String</span>
+              <span class="pl-k">init</span>(name: <span class="pl-c1">String</span>, waterStorage: <span class="pl-c1">String</span>) {
+                <span class="pl-k">self</span><span class="pl-k">.</span>waterStorage <span class="pl-k">=</span> waterStorage
+                <span class="pl-k">super</span><span class="pl-k">.</span><span class="pl-k">init</span>(name: name)
+              }
           }
-      }</pre></div>
+        </pre>
+      </div>
 
-      <p>When an array is composed of items with different classes, type inference will try to find a common super class.</p>
+      <p>
+        When an array is composed of items with different classes, type inference will try to find a common super class.
+      </p>
 
       <div class="highlight highlight-source-swift">
         <pre>
@@ -114,7 +146,9 @@
         </pre>
       </div>
 
-      <p>The <code>as?</code> operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the <code>as!</code> operator.</p>
+      <p>
+        The <code>as?</code> operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the <code>as!</code> operator.
+      </p>
 
       <div class="highlight highlight-source-swift">
         <pre>
@@ -135,15 +169,25 @@
         </pre>
       </div>
 
-      <p>Swift's type inference system makes our source code readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source code flexible and dynamic by permitting various types and downcasting others.</p>
+      <p>
+        Swift's type inference system makes our source code readable and compact by decreasing the need to write repetitive type identifiers. Type inference plays a key role in the functionality of placeholder parameters, which permit the reusability of generic functions with different argument types. Type inference and type annotation can be used together to make our source code flexible and dynamic by permitting various types and downcasting others.
+      </p>
 
       <p>Sources:</p>
 
       <ol>
-      <li><a href="http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger">"To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger</a></li>
-      <li><a href="http://theelearningcoach.com/elearning_design/chunking-information/">"Chunking Information for Instructional Design" by Connie Malamed</a></li>
-      <li><a href="http://www.pl-enthusiast.net/2014/08/05/type-safety/">"Type Safety" by Michael Hicks</a></li>
-      <li> <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html">"The Swift Programming Language (Swift 2.2)"</a></li>
+        <li>
+          <a href="http://www.edutopia.org/blog/appeal-to-what-students-value-heidi-olinger">"To Help Students Learn, Appeal to What They Value" by Heidi A. Olinger</a>
+        </li>
+        <li>
+          <a href="http://theelearningcoach.com/elearning_design/chunking-information/">"Chunking Information for Instructional Design" by Connie Malamed</a>
+        </li>
+        <li>
+          <a href="http://www.pl-enthusiast.net/2014/08/05/type-safety/">"Type Safety" by Michael Hicks</a>
+        </li>
+        <li>
+          <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html">"The Swift Programming Language (Swift 2.2)"</a>
+        </li>
       </ol>
 
       <footer class="site-footer">
