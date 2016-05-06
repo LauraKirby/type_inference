@@ -1,17 +1,5 @@
 ## Prompt:
- Write a short document that explains Swift’s type-inference system and why developers should care.
-
-## Writer's Note to Brian and Alex:
-
- In response to the above-listed prompt, I believe good technical writing demonstrates a deep technical understanding and the ability to reach a diverse audience. Researching various themes for the sample code may engage a wider and more diverse audience [1]. Separating the content into conceptually related sections may help a learner's brain digest the new information [2]. The use of images may help visual learners understand the material [3]. My writing sample aims to document a technical topic while prompt diversity inclusion.
-
- What do teenage girls often think about? According to Heidi Olinger, it's horses. Examples given throughout my writing sample reference a topic that is likely to be relatable by teenage girls - "horse". The concepts mentioned in connection with horses are quite simple, this was done to avoid confusing people who are not horse enthusiasts. Additionally, keeping topics simple may help keep the material understandable by non-native English speakers. Providing examples on a variety of general topics, may help people from diverse backgrounds relate to the material.
-
- In the article, "Chunking Information for Instruction Design", Connie Malamed states that "Content that is conceptually related is meaningful, making it easier to understand." My writing sample has been placed into three sections. The first section informs the audience of the most basic way to understand and implement the concept. The second section goes into more detail and cautions the audience of complex details. The third section encourages the audience to apply the newly learned concepts on their own. Breaking up the material into three sections may help people better digest the new material.
-
- There are 7 different learning styles [3]. Including diverse forms of media may help engage and teach a wider audience. Icons are implemented to help visual learners navigate the material. To ensure clarity of each icon, there will be a key at the beginning of the documentation (key not yet created). Providing various forms of media may help people with various learning styles understand the material.
-
- Through researching ways to engage and enhance the learning experience, my writing sample aims to document a technical topic while promoting diversity inclusion.
+Write a short document that explains Swift’s type-inference system and why developers should care.
 
 ## Documentation: Swift’s Type-inference System
 In "Part 1: Type Inference," we will cover the basics of Swift's type inference system by describing type safety and generic functions. In "Part 2: Type Inference & Type Annotation," we will walk through an example that uses both type inference and type annotation for type casting.
@@ -55,10 +43,10 @@ printChosenColor(myColorName, b: myColorDecimal)
 ```
 
 ## Part 2: Type Inference & Type Annotation
-As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code more dynamic.
+As seen in the section above, type inference allows us to write flexible code. Type annotation allows us to be explicit about acceptable types and is required in type casting. Type inference and type annotation can be used together to make our source code dynamic.
 
 #### Type Casting
-When working with a hierarchy of classes and subclasses we need to be more explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
+When working with a hierarchy of classes and subclasses we need to be explicit about acceptable types. Type casting can be used with classes and subclasses to check the type of a particular class instance and to cast that instance to another class within the same hierarchy.
 
 ```swift
 // Create a class called Plant.
@@ -101,7 +89,7 @@ let myPlants = [
 The `as?` operator can be used when we try to downcast to an unknown subclass. If we are sure that the downcast will be successful, then we can use the `as!` operator.
 
 ```swift
-// Create a function that will interate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.
+// Create a function that will iterate over each item in myPlants, downcast each Plant instance to its subclass, and then access a property from its newly identified class.
 
 func downcastAndPrint(plants:[Plant]) {
     for item in plants {
@@ -124,6 +112,6 @@ Sources:
 
 2. "Chunking Information for Instructional Design" by Connie Malamed, http://theelearningcoach.com/elearning_design/chunking-information/
 
-3. "The 7 Styles of Learning: Which works for you?" by Katie Lepi, http://www.edudemic.com/styles-of-learning/
+3. "Type Safety" by Michael Hicks, http://www.pl-enthusiast.net/2014/08/05/type-safety/
 
-4. "Type Safety" by Michael Hicks, http://www.pl-enthusiast.net/2014/08/05/type-safety/
+4. "The Swift Programming Language (Swift 2.2)", https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
