@@ -114,4 +114,4 @@ Sources:
 
 3. ["Type Safety" by Michael Hicks](http://www.pl-enthusiast.net/2014/08/05/type-safety/)
 
-4. ["The Swift Programming Language (Swift 2.2)"](https://developer.apple.com/library/)ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html
+4. ["The Swift Programming Language (Swift 2.2)"](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html)
