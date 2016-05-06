@@ -2,10 +2,10 @@
 --------------------------
 
 ## Documentation: Swift’s Type-inference System
-First, we will cover the basics of Swift's type inference system. Then we will walk through specific examples of where type annotation is required. We will end by testing some sample code in a Playground.
+First, we will cover the basics of Swift's type inference system by describing type safety and generic functions. Then we will walk through a specific example of where type inference is used with type annotation for type casting. We will end by testing some sample code in a Playground.
 
 ## 1. Type Inference
-Type inference will clean up our source code and allow us to write flexible code through the use of generics.
+Type inference will clean up our source code by decreasing the need to annotate types that the compiler can infer for us.
 
 #### Type Safety
 Swift is a type safe language and requires every expression to have a type at compile-time. If an entity is created and a type is not assigned, the compiler will crash and we will not be able to run our code. This requirement will prevent conflicting type crashes during run time.
@@ -23,12 +23,12 @@ var drought = "a shortage of water resulting from abnormally low rainfall"
 ```
 
 #### Generic Functions
-Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning parameters are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called.
+Generic functions allow us to pass in any type to our function when it is called. Generic functions are defined with *type parameters*, meaning parameters that are annotated with a *placeholder* for a type instead of an *actual* type (e.g. `String`, `Int`). Type parameters allow the parameter type to be inferred by the argument type each time the function is called. Creating generic functions allow us to write less code because we can reuse the same function for different argument types.
 
 The placeholder for a type parameter is named and specified in angle brackets after the function name. Multiple type parameters can be implemented by writing a comma-separated list within the angle brackets.
 
 ```swift
-// Define a function with two placeholder parameters.
+// Define a generic function with two placeholder parameters.
 
 func printChosenColor<T,U>(a: T, b: U) {
     print("You chose the color:", a, b)
